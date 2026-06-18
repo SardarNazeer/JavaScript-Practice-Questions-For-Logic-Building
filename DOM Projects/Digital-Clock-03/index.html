@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        .center{
+            text-align: center;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        h1{
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        #clock{
+            font-size: 3rem;
+            font-weight: bold;
+            color: #38bdf8;
+            background: rgba(255,255,255,0.08);
+            padding: 20px 40px;
+            border-radius: 15px;
+            box-shadow: inset 0 0 10px rgba(255,255,255,0.1);
+            letter-spacing: 3px;
+        }
+
+        @media (max-width: 500px){
+            .center{
+                width: 90%;
+                padding: 25px;
+            }
+
+            h1{
+                font-size: 1.5rem;
+            }
+
+            #clock{
+                font-size: 2rem;
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="center">
+        <h1>Your Local Time</h1>
+        <div id="clock">00:00:00</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

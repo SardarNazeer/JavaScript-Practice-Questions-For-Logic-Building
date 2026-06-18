@@ -1,10 +1,17 @@
-
-let box1 = document.querySelector(".box-1");
-let box2 = document.querySelector(".box-2");
-let box3 = document.querySelector(".box-3");
-let box4 = document.querySelector(".box-4");
+let boxes = document.querySelectorAll(".box");
+let body = document.querySelector("body");
 
 
-box1.addEventListener("onclick",()=>{
-    body.style.backgroundColor = "black";
+boxes.forEach(function(button){
+    button.addEventListener("click",function(e){
+        if (e.target.id === "black") {
+        body.style.backgroundColor = e.target.id;   
+        } if (e.target.id === "yellow") {
+        body.style.backgroundColor = e.target.id;   
+        } if (e.target.id === "green") {
+        body.style.backgroundColor = e.target.id;   
+        } if (e.target.id === "blue") {
+        body.style.backgroundColor = e.target.id;   
+        } 
+    })
 })
