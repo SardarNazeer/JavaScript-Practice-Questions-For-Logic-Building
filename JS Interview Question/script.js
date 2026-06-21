@@ -167,14 +167,170 @@ for(let i = 1; i <= 20; i++){
     }
 }
 
-// 25. 
+// 25. Use a do while loop prints number from 5 to 1.
 
-// 26. 
+let doNum = 5;
 
-// 27. 
+do {
+    console.log(doNum);
+    doNum--;
+} while (doNum > 0);
 
-// 28. 
+// 26. Create a for loop that calculates the factorial of 5. 
 
-// 29. 
+let factNum = 5;
+let factRes = 1;
 
-// 30. 
+for(let i = 1; i<= factNum; i++){
+    factRes = factRes * i;
+}
+
+console.log(factRes);
+
+// 27. Write a nested loop to print 3x3 grid of numbers.
+
+var hold = 1;
+
+for(let i = 1; i <=3; i++){
+    let str = "";
+    for(let j = 1; j<=3; j++){
+        str += `${hold}`;
+        hold++;
+    }
+    console.log(str);
+}
+
+// 28. use a for loop to reverse an array.
+
+// 1st method 
+
+let reverseArray = [1,2,3,4];
+
+for(let i = reverseArray.length-1; i>= 0; i--){
+    console.log(reverseArray[i]);
+}
+
+// 2nd method 
+
+let array = [1,2,3,4];
+
+let reversed = [];
+
+for (let i = array.length-1; i >= 0; i--) {
+    reversed.push(array[i]);
+}
+
+console.log(reversed);
+
+// 3rd method 
+
+let array3 = [1,2,3,4,5];
+
+for (let i = 0; i < array3.length/2; i++) {
+    let temp = array3[i];
+    array3[i] = array3[array3.length - 1 - i];
+    array3[array3.length-1-i] = temp;    
+}
+
+console.log(array3);
+
+// 29. Write a while loop that logs number from 1 to 100 divisble by 5.
+
+let Div5Num = 1;
+while (Div5Num<101) {
+    if (Div5Num % 5 === 0) {
+        console.log(Div5Num);
+    }
+    Div5Num++;
+}
+
+// 30. use a for in loop to iterate over an object and log its value.
+
+let obj = {
+    name: "sardar",
+    age: 18,
+    email: "sardar@gmail.com"
+};
+
+for(let key in obj){
+    console.log(key)
+}
+
+
+// Arrays 
+
+// 31. Create an array of your top 5 favourite movies and log in.
+
+let movies = ["animal", "tere naam", "kabir singh", "hera phiri", "hungama"];
+
+console.log(movies);
+
+movies.forEach(function(value){
+    console.log(value);
+})
+
+// 32. find and log the second element of an array. 
+
+console.log(movies[1]);
+
+// 33. Add to new elements to the start of an array using .unshift().
+
+movies.unshift("don","kick");
+
+console.log(movies);
+
+// 34. Remove the last element of an array and log the updated array. 
+
+movies.pop();
+
+console.log(movies);
+
+// 35. use .slice() to extract the first three elements of an array.
+
+let part = movies.slice(0,3);
+
+console.log(part);
+
+// 36. find the index of an specific element in an array using .indexOf().
+
+console.log(movies.indexOf("kick"));
+
+// 37. check if an value exist in an array using .includes().
+
+console.log(movies.includes("main"));
+
+// 38. Combines two array [1,2] and [3,4] using .concat().
+
+let arr1 = [1,2];
+let arr2 = [3,4];
+
+let concatArr = arr1.concat(arr2);
+
+console.log(concatArr);
+
+// 39. Sort an array of numbers [5,2,9,1,3] in ascending order.
+
+let sortArr = [5,2,9,1,3];
+
+sortArr.sort();
+
+console.log(sortArr);
+
+// 2nd method bubble sort 
+
+let sortArr2 = [33,21,67,12,11];
+
+for(let j = 0; j<sortArr2.length; j++){
+    for (let i = 0; i < sortArr2.length - 1; i++) {
+        if (sortArr2[i] > sortArr2[i+1]) {
+            let temp = sortArr2[i];
+            sortArr2[i] = sortArr2[i + 1];
+            sortArr2[i+1] = temp;
+        }
+        
+    }
+}
+
+console.log(sortArr2);
+
+// 40. Write a programs that creates a copy of an array without mutating the original.
