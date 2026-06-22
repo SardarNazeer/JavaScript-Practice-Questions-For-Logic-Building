@@ -334,3 +334,127 @@ for(let j = 0; j<sortArr2.length; j++){
 console.log(sortArr2);
 
 // 40. Write a programs that creates a copy of an array without mutating the original.
+
+let newArr = [1,2,3,4];
+
+let newArr2 = [];
+
+newArr.forEach(function(value){
+    newArr2.push(value);
+});
+
+console.log(newArr2);
+
+// Functions 
+
+// 41. Write a function to check if a number is even or odd. 
+
+function checkEvenOdd(num){
+    if (num % 2 === 0) {
+        console.log("number is even");
+    } else{
+        console.log("number is odd");
+    }
+}
+
+checkEvenOdd(8);
+
+// 42. Create a function to calculate the area of a with a given radius. 
+
+function areaCircle(radius){
+    let pi = 3.14;
+    let area = pi * (radius*radius);
+    console.log(area);
+}
+
+areaCircle(12);
+
+// 43. Write a function that accept an array and return the sum of its element.
+
+function sumOfAnArray(arr){
+    let sum = 0;
+    arr.forEach(function(value){
+        sum += value;
+    })
+    return sum;
+}
+
+console.log(sumOfAnArray([12,3,4,5]));
+
+// 44. Create a function that check if a string starts with a specific character.
+
+function checkerString(str,char){
+    return str.toLowerCase().startsWith(char);
+}
+
+console.log(checkerString("Sardar","h"));
+
+// 45. Write a function to find the maximum of two numbers.
+
+function maxTwoNum(num1,num2){
+    if (num1 > num2) {
+        console.log("num1 is maximum");
+    } else {
+        console.log("number2 is maximum");
+    }
+}
+
+maxTwoNum(99,12);
+
+
+// 46. Create a function that takes a number and return its factorial.
+
+function factorialNum(num){
+    let fact = 1;
+    for (let i = 1; i <= num; i++) {
+        
+        fact *= i;
+    }
+    return fact;
+}
+
+console.log(factorialNum(5));
+
+// 47. Write a function that accept a string and return its reverse.
+
+function stringRev(value){
+    return value.split('').reverse().join('');
+    // split > me blank string dena '' apko ek array milega har char alag alag huga 
+    // reverse > array ko reverse kardega 
+    // join > array ko wapis se string bana dega 
+}
+
+console.log(stringRev("Sardar"));
+
+// 48. Create a function to find the largest number of an array.
+
+function largestArrNum(arr){
+    var max = 0;
+    for(let i = 1; i<arr.length; i++){
+        if (arr[i] > arr[max]) {
+            max = i;
+        }
+    }
+    return arr[max];
+}
+
+console.log(largestArrNum([1,2,4,5,7,19,12,15,21,55]))
+
+// 49. Write a function that convert a string to kebab-case (e.g hello world, hello-world)
+
+function kebabCase(str){
+    return str.split(' ').join('-');
+}
+
+console.log(kebabCase("hello world"))
+
+// 50. Create a function that logs hello world every time it is called.
+
+function helloWorld(){
+    console.log("Hello World");
+}
+
+helloWorld();
+helloWorld();
+helloWorld();
+helloWorld();
