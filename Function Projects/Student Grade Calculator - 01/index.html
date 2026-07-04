@@ -1,46 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Grade Calculator - Function Project 01</title>
+    <title>Student Grading System</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <div class="container">
-        <form>
-            <label>Name:</label>
-            <input type="text" class="name">
-            <label>Class:</label>
-            <input type="text" class="class">
+<div class="container">
 
-            <label>English Marks:</label>
-            <input type="text" class="engMarks">
+    <!-- ================= Sidebar ================= -->
 
-            <label>Math Marks:</label>
-            <input type="text" class="mathMarks">
+    <aside class="sidebar">
 
-            <label>Computer Marks:</label>
-            <input type="text" class="compMarks">
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div>
+                <h2>Student Grading</h2>
+                <h2>System</h2>
+            </div>
+        </div>
 
-            <label>Physics Marks:</label>
-            <input type="text" class="phyMarks">
+        <nav>
 
-            <label>Biology Marks:</label>
-            <input type="text" class="bioMarks">
+            <a href="#" class="active">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>Add Student</span>
+            </a>
 
-            <label>Chemistry Marks:</label>
-            <input type="text" class="chemMarks">
+            <a href="view-students.html">
+                <i class="fa-solid fa-users"></i>
+                <span>View Students</span>
+            </a>
 
-        </form>
-    </div>
+            <a href="#">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Dashboard</span>
+            </a>
+
+        </nav>
+
+    </aside>
 
 
-    <script src="script.js"></script>
+
+    <!-- ================= Main ================= -->
+
+    <main class="main">
+
+        <!-- Header -->
+
+        <div class="header">
+
+            <div>
+                <h1>Add Student</h1>
+                <p>Enter student details and marks</p>
+            </div>
+
+            <div class="date">
+                <i class="fa-regular fa-calendar"></i>
+                <span>May 15, 2024</span>
+            </div>
+
+        </div>
+
+
+
+        <!-- Form + Result -->
+
+        <section class="top-section">
+
+            <!-- Form -->
+
+            <div class="student-form">
+
+                <div class="input-group">
+
+                    <label>Student Name</label>
+
+                    <input
+                    type="text"
+                    placeholder="Enter student name">
+
+                </div>
+
+
+                <div class="marks">
+
+                    <div class="subject">
+                        <label>Math</label>
+                        <input type="number" placeholder="0 /100">
+                    </div>
+
+                    <div class="subject">
+                        <label>English</label>
+                        <input type="number" placeholder="0 /100">
+                    </div>
+
+                    <div class="subject">
+                        <label>Science</label>
+                        <input type="number" placeholder="0 /100">
+                    </div>
+
+                    <div class="subject">
+                        <label>Computer</label>
+                        <input type="number" placeholder="0 /100">
+                    </div>
+
+                    <div class="subject">
+                        <label>Urdu</label>
+                        <input type="number" placeholder="0 /100">
+                    </div>
+
+                </div>
+
+
+
+                <div class="buttons">
+
+                    <button>
+                        <i class="fa-solid fa-calculator"></i>
+                        Calculate Result
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Save Student
+                    </button>
+
+                    <button>
+                        <i class="fa-solid fa-rotate-right"></i>
+                        Reset
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Result -->
+
+            <div class="result-section">
+
+                <h2>
+                    <i class="fa-solid fa-trophy"></i>
+                    Result
+                </h2>
+
+                <div class="result-cards">
+
+                    <div class="card">
+                        <h4>Total Marks</h4>
+                        <h2>0 / 500</h2>
+                    </div>
+
+                    <div class="card">
+                        <h4>Percentage</h4>
+                        <h2>0%</h2>
+                    </div>
+
+                    <div class="card">
+                        <h4>Grade</h4>
+                        <h2>-</h2>
+                    </div>
+
+                    <div class="card">
+                        <h4>Result</h4>
+                        <h2>-</h2>
+                    </div>
+
+                </div>
+
+
+
+                <h3>Grade Criteria</h3>
+
+                <div class="grade-boxes">
+
+                    <div class="grade">
+                        <p>90-100</p>
+                        <h2>A+</h2>
+                    </div>
+
+                    <div class="grade">
+                        <p>80-89</p>
+                        <h2>A</h2>
+                    </div>
+
+                    <div class="grade">
+                        <p>70-79</p>
+                        <h2>B</h2>
+                    </div>
+
+                    <div class="grade">
+                        <p>60-69</p>
+                        <h2>C</h2>
+                    </div>
+
+                    <div class="grade">
+                        <p>50-59</p>
+                        <h2>D</h2>
+                    </div>
+
+                    <div class="grade">
+                        <p>Below 50</p>
+                        <h2>F</h2>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <div class="view-btn">
+
+            <button>
+                <i class="fa-solid fa-users"></i>
+                View All Students
+            </button>
+
+        </div>
+
+
+
+        <!-- ================= Student Table ================= -->
+
+       
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
 </body>
-
 </html>
